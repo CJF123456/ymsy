@@ -5,4 +5,5 @@
   <view class="gift-name">礼品：小气泡一次</view>
   <button class="get-phone-btn" open-type="getPhoneNumber" disabled="{{get_phonenum_use}}" bindgetphonenumber="get_phonenum" type="primary">领取礼包</button>
   <view class="gift-hint">{{gift_hint}} </view>
+  <canvas style="width: 200px; height: 200px;" canvas-id="canvasId"></canvas>
 </view>

@@ -1,4 +1,5 @@
 // miniprogram/pages/ceshi/ceshi.js
+import drawQrcode from '/libs/weapp.qrcode.esm'
 Page({
 
   /**
@@ -8,7 +9,9 @@ Page({
     phone: "",
     gift_hint: "",
     gift_name: "小气泡一次",
-    get_phonenum_use: false
+    get_phonenum_use: false,
+    width:200,
+    text:'id=1234567890'
   },
 
   /**
@@ -71,5 +74,16 @@ Page({
           })
       }
     })
-  }
+  },
+  drawCanvas () {
+    drawQrcode({
+      width: this.data.width,
+      height: this.data.width,
+      canvasId: 'myQrcode',
+      text: this.data.text,
+      callback(e) {
+        console.log('e: ', e)
+      }
+    })
+  },
 })
