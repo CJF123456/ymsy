@@ -1,0 +1,9 @@
+<!--miniprogram/pages/ceshi/ceshi.wxml-->
+
+<image src="/images/bg.jpg" class="gift_bg" />
+<view style="z-index:10; color:white;text-align:center">
+  <text class="wc_title">悦沐塑颜欢迎你的到来</text>
+  <view>礼品：小气泡一次</view>
+  <button open-type="getPhoneNumber" bindgetphonenumber="get_phonenum" style="color:white">领取礼包</button>
+  <view>{{gift_hint}} </view>
+</view>
