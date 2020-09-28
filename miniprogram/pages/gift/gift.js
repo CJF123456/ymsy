@@ -7,19 +7,20 @@ Page({
   data: {
     phone: "",
     gift_hint: "",
-    gift_name: "小气泡一次"
+    gift_name: "小气泡一次",
+    get_phonenum_use: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
   },
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
   get_phonenum(res) {
@@ -64,6 +65,7 @@ Page({
           .then(res => {
             console.log(res)
             this.setData({
+              get_phonenum_use: true,
               gift_hint: "恭喜成功领取" + this.data.gift_name + "，请尽快到店使用"
             })
           })
