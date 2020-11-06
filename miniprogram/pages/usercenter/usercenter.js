@@ -2,6 +2,7 @@
 Page({
   data: { userPhone: "", tipDialogViewShow: false,userGift:false },
   onLoad(options) {
+    console.log(data);
     this.getDemo();
     let userPhone = wx.getStorageSync("userPhone");
     let userGift = wx.getStorageSync("userGift");

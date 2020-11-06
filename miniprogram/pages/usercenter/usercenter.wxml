@@ -1,13 +1,13 @@
 <!--miniprogram/pages/usercenter/usercenter.wxml-->
-<view class="hor-layout-side" style="width: 94%;height: 100px;background: white">
+<view class="hor-layout-side" style="height: 120px;width:100%;background: white">
     <view class="ver-layout">
-        <view class="text-black" style="font-weight: bold;font-size: large;margin-top: 20px;margin-left: 20px;">
+        <view class="text-black" style="font-size: large;margin-top: 25px;">
             {{userPhone ? userPhone : '你好'}}
         </view>
-        <view class="hor-layout-center" style="margin-top: 5px">
+        <view class="hor-layout-center" style="margin-top: 20px">
             <view class="text-gray" style="margin-left: 20px;" wx:if="{{userPhone}}">欢迎你</view>
-            <button class="text-white get-phone-btn" wx:else size="mini" open-type="getPhoneNumber"
-                    bindgetphonenumber="getUserPhone">请登陆
+            <button class="text-black get-phone-btn" style="font-size: large;margin-left: 10px;" wx:else size="mini" open-type="getPhoneNumber"
+                    bindgetphonenumber="getUserPhone">登陆
             </button>
             <image style="width: 15px;height: 15px;" src="../../images/ic_right.png"></image>
         </view>
@@ -15,17 +15,36 @@
     <view style="flex: 1"></view>
     <image style="width: 20px;height: 20px;margin-top: 20px;margin-right: 20px" src="../../images/qr_code.png"></image>
 </view>
+<!--中间部分-->
 <view style="position: relative">
-    <image style="width: 94%;height: 130px;margin-top: 10px"
-           src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3759264518,88688049&fm=26&gp=0.jpg"></image>
-    <view class="get-gift" style="background:{{(userPhone&&!userGift)?'#A6343B':'#c4c4c4'}}"
-          bind:tap="{{(userPhone&&!userGift)?'getGiftClick':''}}">{{userPhone ? '立即领取' : '登陆领取礼品'}}
+    <view style="height: 160px;margin-top: 10px" class="cent-images">
+        <view class="get-gift-text" style="height: 140px;margin-top: 10px">店庆免费券</view>
+    <!-- <image 
+           src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3759264518,88688049&fm=26&gp=0.jpg"></image> -->
+        <view class="get-gift" style="background:{{(userPhone&&!userGift)?'#000000':'#c4c4c4'}}"
+            bind:tap="{{(userPhone&&!userGift)?'getGiftClick':''}}">{{userPhone ? '立即领取' : '马上领取'}}
+        </view>
     </view>
 </view>
-<view class="ver-layout" style="width: 94%;height: 100px;background: white;margin-top: 10px">
+<!--卡券-->
+<view class="ver-layout" style="height: 100px;background: white;margin-top: 10px">
+    <view bind:tap="toMyCardClick" class="hor-layout-side" style="height: 70px;align-items: center;margin:0px 15px">
+        <view class="text-black">我的卡券</view><view class="red-point"></view>
+        <image class="indi-image" src="../../images/ic_right.png" ></image>
+    </view>
+    <view style="width: calc(100% - 30px);height: 1px;background:#eeeeee;margin: 0px 15px"></view>
+</view>
+<view class="ver-layout" style="height: 100px;background: white;margin-top: 0px">
     <view bind:tap="toMyCardClick" class="hor-layout-side" style="height: 50px;align-items: center;margin:0px 15px">
-        <view class="text-black">卡券</view>
-        <image style="width: 18px;height: 18px;" src="../../images/ic_right.png"></image>
+        <view class="text-black">开发中...</view>
+        <image class="indi-image" src="../../images/ic_right.png"></image>
+    </view>
+    <view style="width: calc(100% - 30px);height: 1px;background:#eeeeee;margin: 0px 15px"></view>
+</view>
+<view class="ver-layout" style="height: 100px;background: white;margin-top: 0px">
+    <view bind:tap="toMyCardClick" class="hor-layout-side" style="height: 50px;align-items: center;margin:0px 15px">
+        <view class="text-black">开发中...</view>
+        <image class="indi-image" src="../../images/ic_right.png"></image>
     </view>
     <view style="width: calc(100% - 30px);height: 1px;background:#eeeeee;margin: 0px 15px"></view>
 </view>
@@ -36,9 +55,9 @@
             <image style="width:200px;height: 200px "
                    src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1654411059,3357003931&fm=26&gp=0.jpg"></image>
             <view style="width: 100%;height: 1px;background:#eeeeee;margin-top: 20px"></view>
-            <view class="text-black" style="font-size: large">亲爱的xx</view>
-            <view class="text-black" style="margin-top: 14px">恭喜您获得***</view>
-            <view class="text-gray" style="margin-top: 7px;font-size: small">请提前预约专柜领取</view>
+            <view class="text-black" style="font-size: large">亲爱的古塔山</view>
+            <view class="text-black" style="margin-top: 14px">恭喜您获得水漾换肤免费体验券一张</view>
+            <view class="text-gray" style="margin-top: 7px;font-size: small">请尽快到店体验</view>
             <view style="height: 30px"></view>
         </view>
         <image style="width: 30px;height: 30px;position:absolute;top:-40px;right:0px;"

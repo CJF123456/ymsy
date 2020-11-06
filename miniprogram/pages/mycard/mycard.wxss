@@ -1,4 +1,11 @@
 /* miniprogram/pages/mycard/mycard.wxss */
 page{
     background: white;
+    
+}
+.text-white{
+    text-align: center;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-size:16px;
+    letter-spacing: 1.5px;
 }

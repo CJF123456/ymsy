@@ -4,17 +4,30 @@ page {
     padding: 3%;
 }
 
-.get-phone-btn {
+/* .get-phone-btn {
     margin-left: 10px;
-    background: #A6343B;
-}
+    background: #b62838;
+} */
 
 .get-gift {
     position: absolute;
-    top: 50%;
-    right: 40px;
+    top: 60%;
+    right: 50px;
     padding: 5px 10px;
     color: white
+}
+.get-gift-text{
+    position: absolute;
+    top: 25%;
+    right: 32px;
+    padding: 5px 10px;
+    color: #000000;
+    text-align: center;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: bold;
+    font-size:16px;
+    letter-spacing: 2px;
+    color: #232323;
 }
 
 .refund-tip-dialog {
@@ -37,13 +50,43 @@ page {
 }
 
 .main .doc {
-    text-align: center;
+    /* text-align: center; */
     padding: 90rpx 0 81rpx 0;
     font-size: 30rpx;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #232323;
 }
-
-
-
+.text-black{
+    text-align: center;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: bold;
+    font-size:16px;
+    letter-spacing: 1.5px;
+    color: #232323;
+}
+.cent-images{
+    background-color: #b62838;
+}
+/* 向右箭头 */
+.indi-image{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+/* 未读红点样式 */
+.red-point{
+     position: relative; 
+    }
+    
+.red-point::before{ 
+    
+    content: " ";
+    border: 3px solid red;/*设置红色*/ 
+    border-radius:3px;/*设置圆角*/ 
+    position: absolute; 
+    z-index: 1000; 
+    right: 0; 
+    margin-right: -110px; 
+    
+}
