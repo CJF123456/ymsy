@@ -1,0 +1,63 @@
+/* 通用view样式 */
+.text-white, .text-black, .text-gray {
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    font-size: 28rpx;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-gray {
+    color: #6F6F6F;
+}
+
+.text-26 {
+    font-size: 26rpx;
+}
+
+.text-30 {
+    font-size: 30rpx;
+}
+
+.text-32 {
+    font-size: 32rpx;
+}
+
+/* 同样布局样式 */
+.ver-layout, .ver-layout-center, ver-layout-center-all {
+    display: flex;
+    flex-direction: column;
+}
+
+.ver-layout-center {
+    align-items: center;
+}
+
+.ver-layout-center-all {
+    align-items: center;
+    justify-content: center;
+}
+
+.hor-layout, .hor-layout-center, .hor-layout-side, .hor-layout-center-all {
+    display: flex;
+    flex-direction: row;
+}
+
+.hor-layout-center {
+    align-items: center;
+}
+
+.hor-layout-side {
+    justify-content: space-between;
+}
+
+.hor-layout-center-all {
+    align-items: center;
+    justify-content: center;
+}

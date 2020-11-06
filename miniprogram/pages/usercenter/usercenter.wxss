@@ -1,0 +1,49 @@
+/* miniprogram/pages/usercenter/usercenter.wxss */
+page {
+    background: #F8F8F8;
+    padding: 3%;
+}
+
+.get-phone-btn {
+    margin-left: 10px;
+    background: #A6343B;
+}
+
+.get-gift {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    padding: 5px 10px;
+    color: white
+}
+
+.refund-tip-dialog {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: calc(100% - 172rpx);
+    background-color: #fff;
+    border-radius: 4rpx;
+}
+
+.main .doc {
+    text-align: center;
+    padding: 90rpx 0 81rpx 0;
+    font-size: 30rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #232323;
+}
+
+
+

@@ -1,5 +1,5 @@
 // miniprogram/pages/ceshi/ceshi.js
-import drawQrcode from '/libs/weapp.qrcode.esm'
+import drawQrcode from '../../libs/weapp.qrcode.esm'
 Page({
 
   /**

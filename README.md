@@ -10,3 +10,4 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+cli auto --project E:\Users\Wx_Project\ymsy --auto-port 9420
