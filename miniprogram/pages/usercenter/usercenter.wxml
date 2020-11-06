@@ -23,12 +23,10 @@
     </view>
 </view>
 <view class="ver-layout" style="width: 94%;height: 100px;background: white;margin-top: 10px">
-    <navigator url="../mycard/mycard">
-        <view class="hor-layout-side" style="height: 50px;align-items: center;margin:0px 15px">
-            <view class="text-black">卡券</view>
-            <image style="width: 18px;height: 18px;" src="../../images/ic_right.png"></image>
-        </view>
-    </navigator>
+    <view bind:tap="toMyCardClick" class="hor-layout-side" style="height: 50px;align-items: center;margin:0px 15px">
+        <view class="text-black">卡券</view>
+        <image style="width: 18px;height: 18px;" src="../../images/ic_right.png"></image>
+    </view>
     <view style="width: calc(100% - 30px);height: 1px;background:#eeeeee;margin: 0px 15px"></view>
 </view>
 

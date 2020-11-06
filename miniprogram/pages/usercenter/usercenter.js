@@ -18,7 +18,7 @@ Page({
       });
   },
   getGiftClick() {
-    this.updateData("tipDialogViewShow",true)
+    this.updateData("tipDialogViewShow", true);
   },
   getUserPhone(res) {
     console.log(res, cloudID);
@@ -41,7 +41,17 @@ Page({
     obj[key] = value;
     this.setData(obj);
   },
-  onDialogClick(){
-    this.updateData("tipDialogViewShow",false)
-  }
+  onDialogClick() {
+    this.updateData("tipDialogViewShow", false);
+  },
+  toMyCardClick() {
+    if (this.data.userPhone) {
+      wx.navigateTo({ url: "../mycard/mycard" });
+    } else {
+      wx.showToast({
+        title: "请登陆",
+        icon: "none",
+      });
+    }
+  },
 });
