@@ -1,10 +1,12 @@
 // miniprogram/pages/usercenter/usercenter.js
 Page({
-  data: { userPhone: "", tipDialogViewShow: false },
+  data: { userPhone: "", tipDialogViewShow: false,userGift:false },
   onLoad(options) {
     this.getDemo();
     let userPhone = wx.getStorageSync("userPhone");
+    let userGift = wx.getStorageSync("userGift");
     this.updateData("userPhone", userPhone);
+    this.updateData("userGift", userGift);
   },
   getDemo() {
     wx.cloud
@@ -19,6 +21,8 @@ Page({
   },
   getGiftClick() {
     this.updateData("tipDialogViewShow", true);
+    this.updateData("userGift", true);
+    wx.setStorageSync("userGift", true);
   },
   getUserPhone(res) {
     console.log(res, cloudID);
@@ -47,6 +51,8 @@ Page({
   toMyCardClick() {
     if (this.data.userPhone) {
       wx.navigateTo({ url: "../mycard/mycard" });
+      wx.setStorageSync("userGift", true);
+      this.updateData("userGift", true);
     } else {
       wx.showToast({
         title: "请登陆",

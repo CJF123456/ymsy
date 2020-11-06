@@ -1,11 +1,14 @@
 <!--miniprogram/pages/mycard/mycard.wxml-->
-<view style="width: 84%;margin: 8%;background: #2B2B35;border-radius: 10px;height: 200px;position: relative">
-    <view class="text-white" style="position:absolute;top: 20px;left: 20px">体验券</view>
-    <view class="text-white" style="position: absolute;left: 20px;bottom: 20px">sdfsdfsdfsdf</view>
-    <image style="width: 20px;height: 20px;margin-top: 20px;margin-right: 20px;position: absolute;right: 0px;"
-           src="../../images/ic_qrcode.png"></image>
-</view>
-<view class="hor-layout-center-all" style="width: 100%">
+<block wx:for="{{cardList}}" wx:key="*this">
+    <view class="hor-layout-center-all" style="width: 84%;margin: 8%;background: #2B2B35;border-radius: 10px;height: 200px;position: relative">
+        <view class="text-white" style="position:absolute;top: 20px;left: 20px">悦沐塑颜</view>
+        <view class="text-white" style="font-size: larger;font-weight: bold">{{item.coupon_name}}</view>
+        <view class="text-white" style="position: absolute;left: 20px;bottom: 20px">{{item.coupon_id}}</view>
+        <image style="width: 20px;height: 20px;position: absolute;right: 20px;top: 20px"
+               src="../../images/ic_qrcode.png"></image>
+    </view>
+</block>
+<view class="hor-layout-center-all" style="width: 100%;visibility: hidden">
     <view class="text-gray" style="font-size: large;margin-top: 20px">
         积分
         <text class="text-black">0</text>

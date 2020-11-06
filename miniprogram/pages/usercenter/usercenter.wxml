@@ -18,8 +18,8 @@
 <view style="position: relative">
     <image style="width: 94%;height: 130px;margin-top: 10px"
            src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3759264518,88688049&fm=26&gp=0.jpg"></image>
-    <view class="get-gift" style="background:{{userPhone?'#A6343B':'#c4c4c4'}}"
-          bind:tap="{{userPhone?'getGiftClick':''}}">{{userPhone ? '立即领取' : '登陆领取礼品'}}
+    <view class="get-gift" style="background:{{(userPhone&&!userGift)?'#A6343B':'#c4c4c4'}}"
+          bind:tap="{{(userPhone&&!userGift)?'getGiftClick':''}}">{{userPhone ? '立即领取' : '登陆领取礼品'}}
     </view>
 </view>
 <view class="ver-layout" style="width: 94%;height: 100px;background: white;margin-top: 10px">
